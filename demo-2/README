@@ -1,0 +1,9 @@
+实现功能
+1.将html放在开发目录实现自动打包HTML
+2.并将打包的js添加到打包的HTML内
+
+用到插件ExtractTextWebpackPlugin
+
+以上操作可参考
+https://doc.webpack-china.org/plugins/extract-text-webpack-plugin/
+https://github.com/jantimon/html-webpack-plugin

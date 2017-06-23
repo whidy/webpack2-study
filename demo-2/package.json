@@ -1,0 +1,17 @@
+{
+  "name": "webpack2-demo",
+  "version": "1.0.0",
+  "description": "a basic webpack2 demo",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "webpack --config webpack.config.js"
+  },
+  "author": "whidy",
+  "license": "ISC",
+  "devDependencies": {
+    "html-webpack-plugin": "^2.28.0",
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.5.0"
+  }
+}

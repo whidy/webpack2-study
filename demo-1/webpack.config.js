@@ -1,6 +1,4 @@
-var path = require('path');
-
-var config = {
+module.exports = {
   entry: './app/index.js',
   output: {
     filename: './dist/bundle.js'
@@ -14,5 +12,3 @@ var config = {
     disableHostCheck: true
   }
 }
-
-module.exports = config;
