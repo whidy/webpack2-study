@@ -1,0 +1,16 @@
+首先见一个目录快速初始化
+npm init -y
+
+然后安装好webpack插件和开发服务器
+npm install --save-dev webpack@2.6.1
+npm install --save-dev webpack-dev-server
+
+然后就要配置webpack.config.js
+
+实现功能
+1.通过修改package.json的script 实现npm run build执行webpack编译
+2.完成js文件自动编译功能
+
+
+以上操作可参考
+https://doc.webpack-china.org/guides/getting-started/

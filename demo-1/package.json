@@ -4,8 +4,13 @@
   "description": "a basic webpack2 demo",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack-dev-server",
+    "build": "webpack --config webpack.config.js"
   },
   "author": "whidy",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.5.0"
+  }
 }
