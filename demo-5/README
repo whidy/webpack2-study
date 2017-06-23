@@ -1,0 +1,10 @@
+实现功能
+1.当然如果图片特别多而且都是很小的图片,我们建议转化为base64在css中,当然较大的图片文件就还是重新编译成独立的图片文件,在loader后面加上参数
+2.将编译出来的图片放在dist的图片目录内,要不然看起来很混乱
+3.这次如果仅处理图片,那么上url-loader几乎代替了file-loader的功能,于是我加入字体文件,这就要再次用到file-loader了~
+
+需要用到和file-loader类似的loader,他就是
+url-loader
+
+以上操作可参考
+https://github.com/webpack-contrib/url-loader

@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'MyFont';
+  src:  url('../font/iconfont.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+* {
+  margin:0;
+  padding:0;
+}
+
+body {
+  background:url(../assert/bg.jpg) repeat center center;
+}
+.container {
+  width: 1000px;
+  height: 600px;
+  margin:0 auto;
+  padding:20px;
+  background:#000 url(../assert/bg.png) no-repeat center center;
+}
+.container p {
+  color: #fff;
+  font-size: 16px;
+  font-family: 'MyFont';
+}
