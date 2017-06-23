@@ -5,17 +5,6 @@ var config = {
   output: {
     filename: './dist/bundle.js'
   },
-  module: {
-    rules: [
-      {
-        test: /\.css$/,
-        use: [
-          'style-loader',
-          'css-loader'
-        ]
-      }
-    ]
-  },
   devServer: {
     contentBase: __dirname,
     compress: true,
