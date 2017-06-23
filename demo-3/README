@@ -1,0 +1,17 @@
+实现功能
+1.将CSS文件加载到HTML内联,并且实现CSS内包含图片
+
+加载 CSS
+npm install --save-dev style-loader css-loader
+加载图片
+npm install --save-dev file-loader
+用到loader
+css-loader
+style-loader
+file-loader
+
+注意webpack.config.js配置文件内的loader正常加载顺序从下到上,从右到左
+
+
+以上操作可参考
+https://doc.webpack-china.org/guides/asset-management/
