@@ -1,0 +1,9 @@
+实现功能
+1.当然CSS通过js方式插入进去似乎不是很让人满意(可能会出现JS未加载到样式出不来的情况),那就将他插入到头部.
+2.由于打包css文件的操作并不复杂,所以插入一些其他的内容,打包的文件加上hash
+
+需要这个插件ExtractTextWebpackPlugin
+npm install --save-dev extract-text-webpack-plugin
+
+以上操作可参考
+https://doc.webpack-china.org/plugins/extract-text-webpack-plugin/
