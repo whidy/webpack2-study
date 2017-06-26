@@ -1,0 +1,13 @@
+实现功能
+1.这次开始要用到sass了!
+
+需要用到sass-loader和node-sass这两个是一起哒
+npm install sass-loader node-sass --save-dev
+
+我从官方copy来的代码直接加到webpack.config.js可以正常编译
+但是问题来了...sass编译出来的内容被加入到头部了...
+其实一般来说不会存在同时编译sass和css的情况,所以其实可以直接修改webpack.config.js内的css和scss文件监测
+这里我改了一个webpack2.config.js来运行,也临时添加了一个script在package.json内.
+
+以上操作可参考
+https://github.com/webpack-contrib/sass-loader

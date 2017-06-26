@@ -21,22 +21,20 @@ body {
   padding: 20px;
   background: #000 url(../assert/bg.png) no-repeat center center;
   position: relative;
-}
-
-.container::before {
-  content: '\e715';
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  border: 1px solid #aaa;
-  font-family: 'MyFont';
-  color: #fff;
-}
-
-.container p {
-  color: #fff;
-  font-size: 16px;
-  font-family: 'MyFont';
+  &::before {
+    content: '\e715';
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border: 1px solid #aaa;
+    font-family: 'MyFont';
+    color: #fff;
+  }
+  p {
+    color: #fff;
+    font-size: 16px;
+    font-family: 'MyFont';
+  }
 }
