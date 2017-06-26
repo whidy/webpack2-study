@@ -1,0 +1,11 @@
+实现功能
+px to rem
+是不是感觉每次改完sass都要跑一次npm run build很麻烦,,这次我们在package.json里面增加一个script
+webpack --config webpack.config.js --watch
+增加了个参数.--watch,这样修改后就不用每次再跑一次
+(其实devserver内自带HMR,不过以后再说.)
+
+此页面宽度为2倍不知道如何解决.(我想应该是直接把设计稿的设计宽度除以2写入页面像素值就好了吧?)
+
+以上操作可参考
+https://github.com/pierreburel/sass-rem

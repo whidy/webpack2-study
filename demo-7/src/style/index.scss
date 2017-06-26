@@ -1,0 +1,79 @@
+@import "tools/rem.scss";
+$rem-baseline: 10px;
+$rem-fallback: false;
+
+
+html {
+  @include rem-baseline;
+}
+
+@media (max-width: 400px) {
+  @include rem-baseline(75%);
+}
+
+@media (min-width: 800px) {
+  @include rem-baseline(125%);
+}
+
+h1 {
+  @include rem(font-size, 24px); // Simple
+  @include rem(border-bottom, 1px solid black); // Shorthand
+  @include rem(box-shadow, 0 0 2px #ccc, inset 0 0 5px #eee); // Multiple values
+  text-shadow: rem(1px 1px #eee, -1px -1px #eee); // Function and multiple values, warning: no fallback possible with rem function
+  // Map support (Sass 3.3+)
+  @include rem(( margin: 20px 1rem, padding: 10px));
+}
+
+.fs-18 {
+  @include rem(font-size, 18px);
+}
+
+@font-face {
+  font-family: 'MyFont';
+  src: url('../font/iconfont.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url(../assert/bg.jpg) repeat center center;
+}
+
+.container {
+
+  width: rem(750px);
+  @include rem(height,
+  300px);
+  @include rem(padding,
+  10px);
+  background: #000 url(../assert/bg.png) no-repeat center center;
+  position: relative;
+  box-sizing: border-box;
+  &::before {
+    content: '\e715';
+    @include rem(width,
+    100px);
+    @include rem(height,
+    100px);
+    position: absolute;
+    @include rem(top,
+    10px);
+    @include rem(right,
+    10px);
+    @include rem(border,
+    1px solid #aaa);
+    font-family: 'MyFont';
+    color: #fff;
+  }
+  p {
+    color: #fff;
+    @include rem(font-size,
+    16px);
+    font-family: 'MyFont';
+  }
+}
