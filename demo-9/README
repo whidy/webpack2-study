@@ -1,0 +1,13 @@
+实现功能
+postcss-loader下的配置postcss.config.js自动加入css兼容前缀
+
+需要安装插件
+postcss-loader
+npm install --save-dev postcss-loader
+
+注意:
+需要手动添加一个postcss.config.js
+按照官方的这个配置里面有个sugarss,可能和csslint类似,反正各种报错,让人疯掉.我给false了...有兴趣找虐的请写sugarss
+webpack.config.js修改只需要在loader里面加入postcss-loader
+
+编译后可以看到我的list里面的样式自动添加了css前缀了~
