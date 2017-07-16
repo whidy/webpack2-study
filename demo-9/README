@@ -1,7 +1,7 @@
 实现功能
 postcss-loader下的配置postcss.config.js自动加入css兼容前缀
 
-需要安装插件
+需要安装loader
 postcss-loader
 npm install --save-dev postcss-loader
 

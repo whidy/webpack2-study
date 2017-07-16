@@ -1,4 +1,9 @@
 实现功能
 增加清除dist目录插件.
+项目依赖jq通过expose-loader将其全局,便于依赖jq的插件正常使用
+使用淘宝的移动端自适应方案flexible
 
-准备处理一些关于jq全局引用的问题
+需要安装loader
+postcss-loader, expose-loader
+npm i --save-dev postcss-loader
+
