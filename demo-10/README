@@ -1,9 +1,21 @@
 实现功能
 增加清除dist目录插件.
 项目依赖jq通过expose-loader将其全局,便于依赖jq的插件正常使用
-使用淘宝的移动端自适应方案flexible
+使用另外一种移动端适配方案
+尝试将模板内插入的script,分别对应两个不同的位置,例如将flexible插入到head内,将其他的js放到body底部
 
 需要安装loader
-postcss-loader, expose-loader
-npm i --save-dev postcss-loader
+expose-loader
+npm i expose-loader --save--dev
 
+参考:
+另外一种移动端适配方案参考
+http://caibaojian.com/simple-flexible.html
+
+其他参考
+No option to inject _some_ chunks into `head`, and _some_ assets into `body` #252
+https://github.com/jantimon/html-webpack-plugin/issues/252
+Inject Webpack Manifest #143
+https://github.com/jantimon/html-webpack-plugin/issues/143
+expose-loader文档
+https://doc.webpack-china.org/loaders/expose-loader/

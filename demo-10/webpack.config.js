@@ -8,16 +8,16 @@ var px2rem = require('postcss-px2rem');
 
 var config = {
   entry: {
-    flexible: './src/script/flexible.js',
-    index: './src/script/index.js'
+    bodyCommon: './src/script/common.js',
+    headFlexible: './src/script/flexible.js',
+    bodyIndex: './src/script/index.js'
   },
   output: {
-    filename: 'bundle.[hash].js',
+    filename: '[name].[hash].js',
     path: path.resolve(__dirname, 'dist')
   },
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.scss$/,
         use: ExtractTextPlugin.extract({
           fallback: "style-loader",
@@ -37,43 +37,41 @@ var config = {
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 4096
-            }
+        use: [{
+          loader: 'url-loader',
+          options: {
+            limit: 4096
           }
-        ]
+        }]
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
         use: [
           'file-loader'
         ]
+      },
+      {
+        test: require.resolve('jquery'),
+        use: [{
+          loader: 'expose-loader',
+          options: 'jQuery'
+        }, {
+          loader: 'expose-loader',
+          options: '$'
+        }]
       }
     ]
   },
   plugins: [
-    new ExtractTextPlugin("index.[hash].css"),
+    new ExtractTextPlugin('indexHead.css'),
     new HtmlWebpackPlugin({
-      "files": {
-        "css": ["main.css"],
-        "js": ["assets/head_bundle.js", "assets/main_bundle.js"],
-        "chunks": {
-          "head": {
-            "entry": "assets/head_bundle.js",
-            "css": ["main.css"]
-          },
-          "main": {
-            "entry": "assets/main_bundle.js",
-            "css": []
-          },
-        }
-      },
       template: './src/index.html',
       filename: 'index.html',
-      inject: 'body'
+      inject: false,
+      chunks: ['bodyCommon', 'headFlexible', 'bodyIndex'],
+      heads: ['headFlexible'],
+      bodys: ['bodyCommon', 'bodyIndex'],
+      style: ['indexHead.css']
     }),
     new CleanWebpackPlugin(['dist'])
   ],

@@ -4,8 +4,8 @@
 }
 
 .container {
-  width: 375px;
-  height: 200px;
+  width: 750px;
+  height: 400px;
   background: #000 url(../assert/bg.png) no-repeat center center;
   position: relative;
   h1 {
@@ -13,7 +13,7 @@
   }
   p {
     color: #fff;
-    font-size: 16px;
+    font-size: 16px; /*no*/
   }
 }
 

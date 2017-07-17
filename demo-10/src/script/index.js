@@ -1,2 +1,4 @@
 require('../style/index.scss');
-require('jquery');
+
+//用到全局JQ
+$('.test').append('<span>jq append text</span>');

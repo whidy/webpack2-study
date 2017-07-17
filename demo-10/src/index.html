@@ -1,19 +1,36 @@
 <!DOCTYPE html>
-<html lang="en" style="font-size:62.5%;">
-  <head>
-    <title>this is webpack2 demo2</title>
-    <meta charset="UTF-8">
-  </head>
-  <body>
-    <div id="app" class="container"></div>
+<html lang="en">
 
-    <div class="test">
-      <p class="fs-18">this is a test text!</p>
-      <ul class="list">
-        <li class="item">nav-1</li>
-        <li class="item">nav-2</li>
-        <li class="item">nav-3</li>
-      </ul>
-    </div>
-  </body>
+<head>
+  <title>this is webpack2 demo2</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="<%= htmlWebpackPlugin.options.style %>" media="all" rel="stylesheet" type="text/css">
+  <% for (var chunk in htmlWebpackPlugin.options.heads) { %>
+  <script src="<%= htmlWebpackPlugin.files.chunks[htmlWebpackPlugin.options.heads[chunk]].entry %>"></script>
+  <% } %>
+</head>
+
+<body>
+  <div id="app" class="container"></div>
+
+  <div class="test">
+    <p class="fs-18">this is a test text!</p>
+    <ul class="list">
+      <li class="item">nav-1</li>
+      <li class="item">nav-2</li>
+      <li class="item">nav-3</li>
+    </ul>
+  </div>
+
+  <% for (var chunk in htmlWebpackPlugin.options.bodys) { %>
+  <script src="<%= htmlWebpackPlugin.files.chunks[htmlWebpackPlugin.options.bodys[chunk]].entry %>"></script>
+  <% } %>
+
+  <script>
+    //此处也可使用jq~
+    $('.list').css('list-style','none');
+  </script>
+</body>
+
 </html>
