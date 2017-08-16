@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 750px;
+  height: 400px;
+  background: #000 url(../assert/bg.png) no-repeat center center;
+  position: relative;
+  h1 {
+    color: #fff;
+  }
+  p {
+    color: #fff;
+    font-size: 16px; /*no*/
+  }
+}
+
+.list {
+  display: flex;
+  .item {
+    flex:1;
+  }
+}

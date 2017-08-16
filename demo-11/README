@@ -1,0 +1,17 @@
+实现功能
+分两个webpack配置文件对开发环境和生产环境打包区分
+我不知道为啥webpack官方文档的方法不能用(并且官方的webpack.config.js代码中有错误...用了汉字的引号)
+我试了很久都没弄出来.
+最后自己写了个
+
+首先是package.json内的script中的start命令...
+然后是webpack.config.js中的${env}不被识别
+
+参考:
+https://doc.webpack-china.org/guides/production/
+手动方式
+
+其他参考
+命令行接口(CLI)
+https://doc.webpack-china.org/api/cli/
+
