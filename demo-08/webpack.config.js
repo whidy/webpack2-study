@@ -3,12 +3,10 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
-var px2rem = require('postcss-px2rem');
-
 var config = {
   entry: './src/index.js',
   output: {
-    filename: 'bundle.[hash].js',
+    filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
   module: {
@@ -49,7 +47,7 @@ var config = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin("index.[hash].css"),
+    new ExtractTextPlugin("index.css"),
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: 'index.html',

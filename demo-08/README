@@ -4,11 +4,14 @@
 
 本人愚钝...搞了很久...插件也是看的稀里糊涂
 
-然后反复测试需要用到的loader和插件包括
+然后反复测试如果需要用到px2rem则有两个方案:
+1.直接用插件 (本例)
 px2rem
 px2rem-loader
+
+2.搭配PostCSS(需要配置postcss.config.js)
+postcss-loader
 postcss-px2rem
-未安装postcss-loader也可以,估计这个是需要另外写一个配置文件配置上面三个的关系和增加其他更多postcss内的复杂插件用的.
 
 那么仍然需要设定基数,给html设置一个font-size,默认是16px,设置10px,其实我目前还是对于其中的关系有些糊涂...不过暂时解决了问题,先这样用等到彻底明白再更新!
 
