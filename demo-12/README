@@ -1,0 +1,9 @@
+优化webpack.config.js中的${env}不被识别产生的问题,并优化了对应的配置(增加css压缩)
+
+修正package.json中无用组件(postcss-px2rem和lib-flexible)
+
+优化之前的postcss配置文件
+
+替换了旧的flexible.js,采用最新原作者的flexible.js,优化移动端适配
+
+修正1px边框兼容问题(参考[mobileWeb2](https://github.com/whidy/mobileweb2))
